@@ -20,6 +20,7 @@
 <style>
 	.counter {
 		--_clr-counter-up: color-mix(in srgb, var(--clr-counter) 100%, black 20%);
+		--_bd-radius: 0.6rem;
 
 		width: 100%;
 		height: 100%;
@@ -36,8 +37,10 @@
 		color: var(--clr-highlight);
 
 		background: var(--_clr-counter-up);
-		border-radius: 0.3rem;
-		box-shadow: 0 3px 1px hsl(0, 0%, 0%, 0.2);
+		border-radius: var(--_bd-radius);
+		box-shadow:
+			0 3px 1px hsl(0, 0%, 0%, 0.2),
+			0 0 0.125rem 0.125rem hsla(0, 0%, 0%, 0.2);
 	}
 
 	.counter::before,
@@ -51,8 +54,8 @@
 		position: absolute;
 		left: 0;
 
-		border-radius: 0.3rem;
-		box-shadow: 0 0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.2);
+		border-radius: var(--_bd-radius);
+		box-shadow: 0 0 0.125rem 0.125rem hsla(0, 0%, 0%, 0.2);
 	}
 
 	.counter::before {
