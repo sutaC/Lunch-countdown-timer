@@ -19,6 +19,7 @@
 
 	a {
 		color: var(--clr-primary);
+		transition: color 0.5s;
 	}
 
 	a:hover,

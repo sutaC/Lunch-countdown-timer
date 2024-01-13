@@ -47,6 +47,8 @@
 		mask-repeat: no-repeat;
 
 		background: var(--clr-primary);
+
+		transition: background-color 0.5s;
 	}
 
 	a:hover,
