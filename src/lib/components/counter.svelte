@@ -27,7 +27,7 @@
 		display: grid;
 		place-content: center;
 
-		font-size: 2.5rem;
+		font-size: clamp(2.5rem, 8vw, 4rem);
 		color: var(--clr-highlight);
 
 		box-shadow: 0 3px 1px hsl(0, 0%, 0%, 0.2);

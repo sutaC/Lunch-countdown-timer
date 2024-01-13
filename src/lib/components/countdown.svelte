@@ -29,6 +29,8 @@
 		gap: 1rem;
 
 		padding: 1rem;
+		width: clamp(40%, 27.5rem, 100%);
+		margin: 0 auto;
 	}
 
 	.counter-container {
