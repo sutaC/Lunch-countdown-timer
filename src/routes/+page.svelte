@@ -6,6 +6,7 @@
 
 <svelte:head>
 	<title>Frontend Mentor | Launch countdown timer</title>
+	<meta name="description" content="A page counting down the time until the product is available" />
 </svelte:head>
 
 <div class="page">

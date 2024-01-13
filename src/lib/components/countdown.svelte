@@ -71,7 +71,7 @@
 
 		color: var(--clr-primary);
 		text-transform: uppercase;
-		font-size: 0.6rem;
-		letter-spacing: 0.2em;
+		font-size: 0.75rem;
+		letter-spacing: 0.15em;
 	}
 </style>

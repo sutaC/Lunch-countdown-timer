@@ -13,7 +13,7 @@
 		bottom: 0.25rem;
 		left: 0;
 		width: 100%;
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 		color: var(--clr-text);
 	}
 
