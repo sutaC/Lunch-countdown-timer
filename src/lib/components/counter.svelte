@@ -10,38 +10,22 @@
 </script>
 
 {#key display}
-	<div class="counter-container">
-		<div class="counter outer">
-			<div class="content" data-text-overlay={display}>
-				{display}
-			</div>
-		</div>
-		<div class="counter inner">
-			<div class="content" data-text-overlay={display}>
-				{display}
-			</div>
+	<div class="counter">
+		<div class="content" data-text-overlay={display}>
+			{display}
 		</div>
 	</div>
 {/key}
 
 <style>
-	.counter-container {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		aspect-ratio: 1;
-		isolation: isolate;
-	}
-
 	.counter {
+		--_clr-counter-up: color-mix(in srgb, var(--clr-counter) 100%, black 20%);
+
 		width: 100%;
 		height: 100%;
 		aspect-ratio: 1;
+		position: relative;
 		isolation: isolate;
-
-		position: absolute;
-		left: 0;
-		top: 0;
 
 		padding: 0.2em;
 
@@ -51,6 +35,8 @@
 		font-size: clamp(2.5rem, 8vw, 4rem);
 		color: var(--clr-highlight);
 
+		background: var(--_clr-counter-up);
+		border-radius: 0.3rem;
 		box-shadow: 0 3px 1px hsl(0, 0%, 0%, 0.2);
 	}
 
@@ -70,7 +56,6 @@
 	}
 
 	.counter::before {
-		--_clr-counter-up: color-mix(in srgb, var(--clr-counter) 100%, black 20%);
 		background-color: var(--_clr-counter-up);
 		top: 0;
 
@@ -129,31 +114,23 @@
 		}
 		100% {
 			background-color: black;
-			opacity: 0.5;
+			opacity: 0.2;
 		}
 	}
 
 	/* --- */
 
-	.counter-container {
+	.counter {
 		--_animation-duration: 0.4s;
 	}
 
-	.outer {
-		z-index: 0;
-	}
-
-	.inner {
-		z-index: 1;
-	}
-
-	.inner.counter::before {
+	.counter::before {
 		animation:
 			flip var(--_animation-duration) ease-out,
 			slide var(--_animation-duration) ease-out;
 	}
 
-	.inner.counter::after {
+	.counter::after {
 		animation: darkening var(--_animation-duration) ease-in;
 	}
 </style>
